@@ -31,5 +31,5 @@ class CommentViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         post_id = self.kwargs.get('post_id')
-        queryset = get_object_or_404(Post, pk=post_id)
-        return queryset.comments
+        new_queryset = get_object_or_404(Post, pk=post_id)
+        return new_queryset.comments
